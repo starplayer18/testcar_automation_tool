@@ -1,6 +1,7 @@
 # testcar_automation_tool ver.0.1
 
 현대자동차에서 시험차 담당자들의 전표처리를 위한 automation tool입니다.
+상세 가이드 : https://synergy.ccos.dev/pages/viewpage.action?pageId=115448499
 
 <file>
 - testcar_automation_tool.py
