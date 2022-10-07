@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>kyungjoon.hyun</author>
+ <class>InfotainmentCenter_TestCar_Helper</class>
+ <widget class="QMainWindow" name="InfotainmentCenter_TestCar_Helper">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>현대산스 Head OTF</family>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+    background-color: #EAEAEA;
+	color: &quot;#14324C&quot;
+}
+
+QLineEdit
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffffff, stop: 0 #ffffff, stop: 1 #ffffff);
+    padding: 1px;
+    border-style: solid;
+    border: 1px solid #14324C;
+}
+
+QLineEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #14324C, stop: 1 #14324C);
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>14</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>현대산스 Head OTF Bold</family>
+      <pointsize>18</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: &quot;#14324C&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>시험차 전표 Helper </string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>761</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>현대산스 Head OTF</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+border: 2px solid gray;
+border-color: #14324C;
+margin-top: 27px;
+font-size: 14px;
+}
+QGroupBox::title {
+border-top-left-radius: 9px;
+border-top-right-radius: 9px;
+padding: 6px 348px;
+background-color: #14324C;
+color: rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="title">
+     <string>영수증 정보</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>71</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>차량 번호 : </string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="car_num_combo">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>71</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox
+{
+    background-color: #ffffff;
+    border-style: solid;
+    border: 1px solid #14324C;
+}
+
+QComboBox:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #14324C, stop: 1 #14324C);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>비        용 : </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="cost_edit">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>107</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>71</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>날     짜 :</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>107</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>사    용    처 : </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="description_edit">
+     <property name="geometry">
+      <rect>
+       <x>327</x>
+       <y>107</y>
+       <width>291</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="add_button">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>74</y>
+       <width>91</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>12</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    color: #ffffff;
+    background-color: #14324C;
+    border-width: 1px;
+    border-color: #14324C;
+    border-style: solid;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+border-radius:10
+}
+
+QPushButton:hover {
+	 background-color: #E6E6E6;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #14324C
+}
+
+QPushButton:pressed {
+	 background-color: #14324C;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #ffffff
+}</string>
+     </property>
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="date_edit">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>71</y>
+       <width>91</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="placeholderText">
+      <string>yy.mm.dd</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>358</x>
+       <y>71</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>수  량 (EA) :</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="count_edit">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>70</y>
+       <width>31</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>72</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>현대산스 Text OTF</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>소 명 여 부 :</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="check_combo">
+     <property name="geometry">
+      <rect>
+       <x>578</x>
+       <y>70</y>
+       <width>41</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox
+{
+    background-color: #ffffff;
+    border-style: solid;
+    border: 1px solid #14324C;
+}
+
+QComboBox:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #14324C, stop: 1 #14324C);
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>N</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QListWidget" name="list_widget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>611</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>현대산스 Head OTF</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+	border: 2px solid gray;
+border-color: #14324C;
+}</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>761</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="remove_button">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>220</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>현대산스 Text OTF</family>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    color: #ffffff;
+    background-color: #14324C;
+    border-width: 1px;
+    border-color: #14324C;
+    border-style: solid;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+border-radius:10
+}
+
+QPushButton:hover {
+	 background-color: #E6E6E6;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #14324C
+}
+
+QPushButton:pressed {
+	 background-color: #14324C;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #ffffff
+}</string>
+    </property>
+    <property name="text">
+     <string>Remove Item</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="export_button">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>320</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>현대산스 Text OTF</family>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    color: #ffffff;
+    background-color: #14324C;
+    border-width: 1px;
+    border-color: #14324C;
+    border-style: solid;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+border-radius:10
+}
+
+QPushButton:hover {
+	 background-color: #E6E6E6;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #14324C
+}
+
+QPushButton:pressed {
+	 background-color: #14324C;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #ffffff
+}</string>
+    </property>
+    <property name="text">
+     <string>Excel Export</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clear_button">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>270</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>현대산스 Text OTF</family>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+    color: #ffffff;
+    background-color: #14324C;
+    border-width: 1px;
+    border-color: #14324C;
+    border-style: solid;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+border-radius:10
+}
+
+QPushButton:hover {
+	 background-color: #E6E6E6;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #14324C
+}
+
+QPushButton:pressed {
+	 background-color: #14324C;
+	border-width: 2px;
+    border-color: #14324C;
+	color: #ffffff
+}</string>
+    </property>
+    <property name="text">
+     <string>Clear</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>20</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ver. 0.1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionUser_Guide"/>
+    <addaction name="actionAbout_helper"/>
+   </widget>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAbout_helper">
+   <property name="text">
+    <string>About helper</string>
+   </property>
+  </action>
+  <action name="actionUser_Guide">
+   <property name="text">
+    <string>User Guide</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>car_num_combo</tabstop>
+  <tabstop>date_edit</tabstop>
+  <tabstop>count_edit</tabstop>
+  <tabstop>check_combo</tabstop>
+  <tabstop>cost_edit</tabstop>
+  <tabstop>description_edit</tabstop>
+  <tabstop>add_button</tabstop>
+  <tabstop>remove_button</tabstop>
+  <tabstop>clear_button</tabstop>
+  <tabstop>export_button</tabstop>
+  <tabstop>list_widget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
