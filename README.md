@@ -1,14 +1,16 @@
 # testcar_automation_tool ver.0.1
 
 현대자동차에서 시험차 담당자들의 전표처리를 위한 automation tool입니다.
+
 상세 가이드 : https://synergy.ccos.dev/pages/viewpage.action?pageId=115448499
 
-<file>
+## file tree
 - testcar_automation_tool.py
 - config.json
 - view.ui
 
-* config.json
+### config.json
+``` JSON
 {
     "basic_info" : {
         "team_name": "",      #집행부서
@@ -36,10 +38,10 @@
         "9009": "JK"
     }
 }
-
+```
 시험차 전표처리를 위한 사전 정보를 config.json에 추가해야 합니다.
 
 
-* testcar_automation_tool.py
+### testcar_automation_tool.py
 config.json 내용을 parsing하여 필요한 정보를 set하고, view.ui를 통하여 사용자가 입력한 정보를 가공하여
 구매의뢰 excel file / 시스템 입력용 excel file 2개를 export한다.
